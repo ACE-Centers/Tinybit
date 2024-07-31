@@ -1,7 +1,7 @@
 {
     "name": "ACE-Tinybit",
     "version": "2.0.2",
-    "description": "Extension for YahBoom Tiny:bit V2.0.2",
+    "description": "Tinybit by YahBoom",
     "license": "MIT",
     "dependencies": {
         "core": "*",
