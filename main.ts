@@ -495,7 +495,7 @@ export function moveRobotBySteps(direction: Direction, steps: number): void {
         basic.pause(500); // Pause for visibility of each step
         // Stop motors after each step
         setPwmMotor(0, 0, 0); // Stop all motors
-        basic.pause(50); // Short pause before next step
+        basic.pause(200); // Short pause before next step
     }
 }
 
