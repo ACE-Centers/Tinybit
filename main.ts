@@ -454,7 +454,7 @@ namespace Tinybit_ACE {
 
 
     // Function to turn the robot by a specific angle
-    //% blockId=turn_robot_angle block="Turn robot %direction by %angle degrees"
+    //% blockId=turn_robot_angle block="turn robot %direction by %angle degrees"
     //% weight=92
     //% angle.min=0 angle.max=360
     //% blockGap=10
@@ -483,7 +483,7 @@ export enum Direction {
 }
 
 // Function to move the robot by steps
-//% blockId=move_robot_steps block="Move robot %direction for %steps steps"
+//% blockId=move_robot_steps block="move robot %direction for %steps steps"
 //% weight=101 color=#585CA9
 export function moveRobotBySteps(direction: Direction, steps: number): void {
     for (let i = 0; i < steps; i++) {
@@ -500,7 +500,7 @@ export function moveRobotBySteps(direction: Direction, steps: number): void {
 }
 
 // Function to move the robot by distance
-//% blockId=move_robot_distance block="Move robot %direction for %distance cm"
+//% blockId=move_robot_distance block="move robot %direction for %distance cm"
 //% weight=102 color=#585CA9
 export function moveRobotByDistance(direction: Direction, distance: number): void {
     const speed = 100; // Speed at which the robot moves
@@ -534,7 +534,7 @@ function speedValueToCmPerSecond(speedValue: number): number {
 }
 
 // Function to move the robot based on user-defined time, speed, and direction
-//% blockId=move_robot_time_speed_direction block="Move robot %direction for %time seconds at speed %speed"
+//% blockId=move_robot_time_speed_direction block="move robot %direction for %time seconds at speed %speed"
 //% weight=103 color=#585CA9
 export function moveRobotForTimeAndSpeed(direction: Direction2, time: number, speed: number): void {
     const speedCmPerSecond = speedValueToCmPerSecond(speed);
