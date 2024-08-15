@@ -271,16 +271,13 @@ namespace Tinybit_ACE {
         }
     }
 
-    //% blockId=Tinybit_CarCtrlSpeed block="Car Control|%index|speed %speed ||for %time s"
+    //% blockId=Tinybit_CarCtrlSpeed block="Car Control|%index|speed %speed"
     //% weight=6
     //% blockGap=10
-    //% expandableArgumentMode="toggle"
     //% speed.min=0 speed.max=255
     //% color="#585CA9"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=10
-    export function CarCtrlSpeed(index: CarState, speed: number, time?: number): void {
-        if (time === undefined) {
-        time = -1;}
+    export function CarCtrlSpeed(index: CarState, speed: number,): void {
         switch (index) {
             case CarState.Car_Run: Car_run(speed, speed); break;
             case CarState.Car_Back: Car_back(speed, speed); break;
@@ -290,8 +287,6 @@ namespace Tinybit_ACE {
             case CarState.Car_SpinLeft: Car_spinleft(speed, speed); break;
             case CarState.Car_SpinRight: Car_spinright(speed, speed); break;
         }
-        control.waitMicros(time * 1000000); // Wait for the specified time
-        setPwmMotor(0, 0, 0); // Stop the robot
     }
 
     //% blockId=Tinybit_CarCtrlSpeed2 block="Car Control|%index|speed1 %speed1|speed2 %speed2 ||for %time s"
