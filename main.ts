@@ -477,7 +477,7 @@ export function moveRobotBySteps(direction: Direction, steps: number): void {
         } else if (direction === Direction.Backward) {
             setPwmMotor(2, 80,80); // Move backward
         }
-        basic.pause(500); // Pause for visibility of each step
+        basic.pause(750); // Pause for visibility of each step
         // Stop motors after each step
         setPwmMotor(0, 0, 0); // Stop all motors
         basic.pause(500); // Short pause before next step
